@@ -31,8 +31,9 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   
   
   
+  def valid_phone_number?(number)
 
-  binding.pry
-def valid_phone_number?(phone)
-    
-end
+    pattern = /^\d{10}$|^[(]\d{3}[)]\d{3}-\d{4}$|^\d{3}-\d{3}-\d{4}$|^\d{3}\s\d{3}\s\d{4}$|^\d{3}\s\d{3}-\d{4}$|^\d{3}-\d{3}\s\d{4}$/
+    return pattern.match(number) ? true : false
+  end
+
